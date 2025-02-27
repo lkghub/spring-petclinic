@@ -18,6 +18,12 @@ pipeline {
                 sh 'mvn clean'
             }
         }
+        stage('Test') {
+            steps {
+                echo 'Running unit tests...'
+                sh 'mvn test'
+            }
+        }
     }
 
     post {
